@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "A react boilerplate project, use to init other projects",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/albertoperezf/react-boilerplate.git"
@@ -13,6 +10,7 @@
   "keywords": [],
   "author": "Alberto Perez",
   "license": "ISC",
+  "homepage": "https://github.com/albertoperezf/react-boilerplate#readme",
   "engines": {
     "npm": ">=5.6.0",
     "yarn": ">=1.7.0",
@@ -21,5 +19,120 @@
   "bugs": {
     "url": "https://github.com/albertoperezf/react-boilerplate/issues"
   },
-  "homepage": "https://github.com/albertoperezf/react-boilerplate#readme"
+  "scripts": {
+    "build:pro": "cd ./webpack && webpack --env.env=pro --progress",
+    "lint:css": "stylelint ./src/**/*.scss",
+    "lint:css:fix": "stylelint ./src/**/*.scss --fix",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "lint:staged": "lint-staged",
+    "start": "cd ./webpack && webpack-dev-server --env.env=dev-local",
+    "start:pro": "cd ./webpack && webpack-dev-server --env.env=pro",
+    "test": "jest"
+  },
+  "pre-commit": [
+    "lint:staged"
+  ],
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/*.config.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/build",
+      "<rootDir>/coverage",
+      "<rootDir>/jest",
+      "<rootDir>/src/main.js",
+      "<rootDir>/webpack"
+    ],
+    "moduleNameMapper": {
+      "^.*\\.scss$": "jest/SassStub.js",
+      "^.*\\.(jpg|jpeg|png|svg|gif)$": "jest/AssetStub.js"
+    },
+    "modulePaths": [
+      "<rootDir>",
+      "<rootDir>/src"
+    ],
+    "notify": true,
+    "setupFiles": [
+      "./jest/jest-setup.js"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/babel-polyfill/"
+    ],
+    "globals": {
+      "ENVIRONMENT": "PRO"
+    },
+    "testURL": "http://localhost"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "babel-polyfill": "6.26.0",
+    "history": "4.7.2",
+    "i18next": "11.5.0",
+    "js-cookie": "2.2.0",
+    "node-sass": "4.9.2",
+    "prop-types-extra": "1.1.0",
+    "query-string": "5.1.1",
+    "react": "16.5.2",
+    "react-async-component": "2.0.0",
+    "react-compomeds": "3.0.0-alpha.32",
+    "react-dom": "16.5.2",
+    "react-helmet": "5.2.0",
+    "react-notification-system": "0.2.17",
+    "react-redux": "5.0.7",
+    "redux": "4.0.1",
+    "redux-thunk": "2.3.0",
+    "url-search-params-polyfill": "4.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "8.2.6",
+    "babel-jest": "23.4.2",
+    "babel-loader": "7.1.5",
+    "babel-plugin-flow-runtime": "0.17.0",
+    "babel-plugin-react-flow-props-to-prop-types": "0.15.0",
+    "babel-plugin-react-transform": "3.0.0",
+    "babel-plugin-transform-decorators-legacy": "1.3.5",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-flow": "6.23.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "clean-webpack-plugin": "0.1.19",
+    "copy-webpack-plugin": "4.5.2",
+    "css-loader": "1.0.0",
+    "css-to-string-loader": "0.1.3",
+    "cssnano": "4.0.5",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.0.0",
+    "eslint-plugin-flowtype": "2.50.3",
+    "eslint-plugin-import": "2.13.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.10.0",
+    "file-loader": "1.1.11",
+    "html-webpack-plugin": "3.2.0",
+    "img-loader": "3.0.0",
+    "jest": "23.4.2",
+    "lint-staged": "7.2.0",
+    "lodash-webpack-plugin": "0.11.5",
+    "mini-css-extract-plugin": "0.4.1",
+    "path": "0.12.7",
+    "pre-commit": "1.2.2",
+    "precss": "3.1.2",
+    "sass-loader": "7.1.0",
+    "snazzy": "7.1.1",
+    "style-loader": "0.21.0",
+    "stylelint": "9.4.0",
+    "stylelint-config-recommended-scss": "3.2.0",
+    "stylelint-scss": "3.2.0",
+    "url-loader": "1.0.1",
+    "webpack": "4.21.0",
+    "webpack-bundle-analyzer": "3.0.3",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.9",
+    "webpack-hot-middleware": "2.24.3",
+    "webpack-merge": "4.1.4"
+  }
 }
