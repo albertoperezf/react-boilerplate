@@ -5,14 +5,11 @@
     "node": true
   },
   "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/react"
+    "airbnb"
   ],
   "parser": "babel-eslint",
   "plugins": [
-    "react",
-    "prettier"
+    "react"
   ],
   "rules": {
     "jsx-a11y/anchor-is-valid": [ "error", {
@@ -21,7 +18,6 @@
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
     "no-use-before-define": ["error", { "functions": false}],
-    "prettier/prettier": "error",
     "radix": [1],
     "react/jsx-filename-extension": [2, { "extensions": [".js"] }],
     "react/prefer-stateless-function": [0],

@@ -11,13 +11,13 @@ module.exports = {
     precss(),
     postcssFocus(),
     cssnext({
-      browsers: ['last 2 versions', 'IE > 10']
+      browsers: ['last 2 versions', 'IE > 10'],
     }),
     cssnano({
-      reduceIdents: false
+      reduceIdents: false,
     }),
     postcssReporter({
-      clearMessages: true
-    })
-  ]
+      clearMessages: true,
+    }),
+  ],
 };

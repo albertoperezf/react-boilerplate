@@ -2,7 +2,7 @@ function matchMedia() {
   return {
     matches: false,
     addListener() {},
-    removeListener() {}
+    removeListener() {},
   };
 }
 

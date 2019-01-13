@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FlowWebpackPlugin = require('flow-webpack-plugin');
 const webpackConstants = require('./constants/webpack.constants');
 
 const { dirname } = webpackConstants;
@@ -13,7 +12,6 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
-    new FlowWebpackPlugin(),
     new HtmlWebpackPlugin(webpackConstants.htmlWebpackPlugin)
   ],
   resolve: {
