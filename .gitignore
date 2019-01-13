@@ -1,0 +1,38 @@
+# Project generated files
+coverage/
+build/
+dist/
+dlls/
+flow-typed/
+node/
+node_modules/
+styleguide/
+
+# Generic trash
+.DS_Store
+npm-debug.log
+yarn-error.log
+
+# Keep .idea templates
+!.idea/
+.idea/dictionaries/
+.idea/libraries/
+.idea/inspectionProfiles/
+.idea/fileTemplates/code/
+.idea/fileTemplates/includes/
+.idea/fileTemplates/internal/
+.idea/fileTemplates/j2ee/
+.idea/shelf/
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/misc.xml
+.idea/webResources.xml
+.idea/codeStyleSettings.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+.idea/watcherTasks.xml
+.idea/*.iml
+
+# Stats bundle analizer
+webpack/stats.json

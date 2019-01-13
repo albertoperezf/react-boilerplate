@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "A react boilerplate project, use to init other projects",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/albertoperezf/react-boilerplate.git"
@@ -13,6 +10,7 @@
   "keywords": [],
   "author": "Alberto Perez",
   "license": "ISC",
+  "homepage": "https://github.com/albertoperezf/react-boilerplate#readme",
   "engines": {
     "npm": ">=5.6.0",
     "yarn": ">=1.7.0",
@@ -21,5 +19,20 @@
   "bugs": {
     "url": "https://github.com/albertoperezf/react-boilerplate/issues"
   },
-  "homepage": "https://github.com/albertoperezf/react-boilerplate#readme"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "5.12.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.12.3",
+    "pre-commit": "1.2.2",
+    "stylelint": "9.9.0",
+    "stylelint-config-recommended-scss": "3.2.0",
+    "stylelint-scss": "3.5.0",
+    "webpack": "4.28.4",
+    "webpack-cli": "3.2.1"
+  }
 }
