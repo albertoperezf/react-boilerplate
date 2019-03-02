@@ -34,5 +34,9 @@ yarn-error.log
 .idea/watcherTasks.xml
 .idea/*.iml
 
+# Linters
+.eslintcache
+.stylelintcache
+
 # Stats bundle analizer
 webpack/stats.json
