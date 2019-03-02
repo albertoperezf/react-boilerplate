@@ -1,13 +1,13 @@
 {
   "name": "react-boilerplate",
   "version": "0.0.2",
-  "description": "A react boilerplate project, use to init other projects",
-  "main": "index.js",
+  "description": "A react-redux boilerplate project, use to init other projects",
+  "main": "index.ejs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/albertoperezf/react-boilerplate.git"
   },
-  "keywords": [],
+  "keywords": ["javascript", "react", "redux", "boilerplate", "css", "sass", "jest", "eslint", "stylelint", "git"],
   "author": "Alberto Perez",
   "license": "ISC",
   "homepage": "https://github.com/albertoperezf/react-boilerplate#readme",
