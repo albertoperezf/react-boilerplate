@@ -1,15 +1,46 @@
-const webpackMerge = require('webpack-merge');
+const host = '0.0.0.0';
 const path = require('path');
-const devConfig = require('./webpack.config.dev');
+const port = 3018;
+const webpack = require('webpack');
 const webpackConstants = require('./constants/webpack.constants');
 
-const { dirname } = webpackConstants;
-const host = '0.0.0.0'; // src ip 0.0.0.0 will accept from any dns or ip. e.g localhost or 192.168.1.110 (ip machine)
-const port = 3018; // src port
-// const serverHost = '0.0.0.0'; // Ip server machine, not accepted localhost if you launch src on docker
-// const serverPort = 8880; // server port
+const { dirname, sassLoaders } = webpackConstants;
 
-const devLocalConfig = {
+module.exports = {
+  mode: 'development',
+  devtool: 'eval',
+  entry: {
+    index: [path.join(dirname, 'src/main.js')]
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      ENVIRONMENT: JSON.stringify('DEV')
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.(css|scss)$/,
+        oneOf: [
+          {
+            resourceQuery: /toString/, // foo.css?toString
+            use: [
+              {
+                loader: 'css-to-string-loader'
+              }
+            ].concat(sassLoaders)
+          },
+          {
+            use: [
+              {
+                loader: 'style-loader'
+              }
+            ].concat(sassLoaders)
+          }
+        ]
+      }
+    ]
+  },
   devServer: {
     open: true,
     host,
@@ -18,6 +49,7 @@ const devLocalConfig = {
     contentBase: path.join(dirname, 'build'),
     historyApiFallback: true,
     proxy: {},
+    disableHostCheck: true,
     stats: {
       assets: true,
       children: true,
@@ -30,8 +62,4 @@ const devLocalConfig = {
       warnings: true
     }
   }
-};
-
-module.exports = {
-  ...webpackMerge(devConfig, devLocalConfig)
 };
