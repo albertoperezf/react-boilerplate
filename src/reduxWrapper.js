@@ -16,8 +16,10 @@ export default async (initialStateStore) => {
 
   render(
     <Provider store={store}>
-      <ReduxToastr {...TOASTR_CONFIG} />
-      <Router />
+      <div>
+        <ReduxToastr {...TOASTR_CONFIG} />
+        <Router />
+      </div>
     </Provider>,
     app,
   );

@@ -10,7 +10,7 @@ module.exports = {
   mode: 'development',
   devtool: 'eval',
   entry: {
-    index: [path.join(dirname, 'src/main.js')]
+    index: ['babel-polyfill', path.join(dirname, 'src/main.js')]
   },
   plugins: [
     new webpack.DefinePlugin({
