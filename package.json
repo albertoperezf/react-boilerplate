@@ -7,7 +7,18 @@
     "type": "git",
     "url": "git+https://github.com/albertoperezf/react-boilerplate.git"
   },
-  "keywords": ["javascript", "react", "redux", "boilerplate", "css", "sass", "jest", "eslint", "stylelint", "git"],
+  "keywords": [
+    "javascript",
+    "react",
+    "redux",
+    "boilerplate",
+    "css",
+    "sass",
+    "jest",
+    "eslint",
+    "stylelint",
+    "git"
+  ],
   "author": "Alberto Perez",
   "license": "ISC",
   "homepage": "https://github.com/albertoperezf/react-boilerplate#readme",
