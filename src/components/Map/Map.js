@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export default class About extends Component {
+export default class Map extends Component {
   static propTypes = {
     // children: PropTypes.node.isRequired,
     // location: PropTypes.string.isRequired,
@@ -11,12 +11,12 @@ export default class About extends Component {
     return (
       <div>
         <h1>
-          About Page!
+          Map Page!
         </h1>
 
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text.
-        </p>
+        <h2>
+Map Here!
+        </h2>
       </div>
     );
   }

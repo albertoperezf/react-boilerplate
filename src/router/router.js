@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Router, Switch } from 'react-router-dom';
+import About from 'components/About/About';
 import Home from 'components/Home/Home';
+import Map from 'components/Map/Map';
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 import * as routerConstants from 'constants/routerConstants';
 import ChangeRoute from 'router/changeRoute';
@@ -21,7 +23,12 @@ export default () => (
             <Route
               exact
               path={routerConstants.ROUTER_ABOUT}
-              component={Home}
+              component={About}
+            />
+            <Route
+              exact
+              path={routerConstants.ROUTER_MAP}
+              component={Map}
             />
           </ErrorBoundary>
         </Switch>

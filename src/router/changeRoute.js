@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 class ChangeRoute extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    location: PropTypes.string.isRequired,
+    location: PropTypes.shape().isRequired,
   }
 
   componentDidUpdate(prevProps) {
