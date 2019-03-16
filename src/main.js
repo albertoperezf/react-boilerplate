@@ -1,5 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import featuresInitialState from 'reducers/initialStates/features/featuresInitialState';
+import reduxWrapper from './reduxWrapper';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+const initialStoreState = {
+  features: {
+    ...featuresInitialState,
+  },
+};
+
+reduxWrapper(initialStoreState);

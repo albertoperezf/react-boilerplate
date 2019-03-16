@@ -19,7 +19,6 @@ module.exports = {
   vendors: [
     'babel-polyfill',
     'react',
-    'react-compomeds',
     'react-dom',
     'react-redux',
     'redux'
